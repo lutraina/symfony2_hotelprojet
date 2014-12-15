@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        	{% stylesheets filter='cssrewrite'
+        		'%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.css'
+        		'%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap-theme.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/custom.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/style.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/skeleton-responsive.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/layout-responsive.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/style-custome735.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/superfishe735.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/prettyPhotoe735.css'
+        		'@PousadaElcapitanBundle/Resources/public/css/flexslidere735.css'
+        	%}
+        	<link rel="stylesheet" href="{{ asset_url }}"/>
+        	{% endstylesheets %}
+        {% endblock %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="page page-id-2343 page-template-default">
+    <div class="container">
+        {% block body %}{% endblock %}
+        
+    </div>    
+        {% block javascripts %}
+        	{% javascripts %}
+        		'%kernel.root_dir%/../vendor/components/jquery/jquery.js'
+        		'%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstraps.js'
+        		'@PousadaElcapitanBundle/Resources/public/js/superfish5152.js?ver=1.0'
+				'@PousadaElcapitanBundle/Resources/public/js/supersub5152.js?ver=1.0'
+				'@PousadaElcapitanBundle/Resources/public/js/hoverIntent5152.js?ver=1.0'
+				'@PousadaElcapitanBundle/Resources/public/js/gdl-scripts5152.js?ver=1.0'
+				'@PousadaElcapitanBundle/Resources/public/js/jquery.easing5152.js?ver=1.0'
+				'@PousadaElcapitanBundle/Resources/public/js/jquery.prettyPhoto5152.js?ver=1.0'
+				        		
+        	%}
+        	<script src="{{ asset_url }}"/></script>
+        	{% endjavascripts %}
+        {% endblock %}
+    </body>
+</html>

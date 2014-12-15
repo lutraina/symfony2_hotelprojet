@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 style="margin-top:50px;">Nouvelle Image</h1>
+
+    {{ form(form) }}
+
+	<a class="btn btn-default" href="{{ path('issue') }}">
+	    Voir tous les enregistrements
+	</a>
+	
+	<br/><br/>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1 style="margin-top:50px;">Catégories</h1>
+
+    <table class="records_list table">
+        <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('publication_show', { 'id': entity.id }) }}">{{ entity.name }}</a></td>
+                <td>
+                    <a class="btn btn-default btn-xs" href="{{ path('publication_show', { 'id': entity.id }) }}">voir</a>
+                    <a class="btn btn-default btn-xs" href="{{ path('publication_edit', { 'id': entity.id }) }}">modifier</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <a class="btn btn-default" href="{{ path('publication_new') }}" style="margin-top:30px;">
+	        Nouvelle catégorie
+	    </a>
+    {% endblock %}

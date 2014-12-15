@@ -1,0 +1,35 @@
+{% extends '::base.html.twig' %}
+{% block title %}Issue Index{% endblock %}
+
+{% block body -%}
+    <h1 class="liste_images">Liste des images</h1>
+
+    <table class="records_list table">
+        <thead>
+            <tr>
+                <th>Catégorie de la publication</th>
+                <th>Numéro / Date</th>
+                <th>Image</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.publication.name }}</a></td>
+                <td>#{{ entity.number }} - {% if entity.datePublication %}{{ entity.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.cover %}<img class="img-responsive image" width="100" src="{{ asset(entity.getCoverWeb) }}"/>{% endif%}</td>
+                <td>
+                    <a class="btn btn-default btn-xs" href="{{ path('issue_show', { 'id': entity.id }) }}">voir</a>
+                    <a class="btn btn-default btn-xs" href="{{ path('issue_edit', { 'id': entity.id }) }}">modifier</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    <a class="btn btn-default" href="{{ path('issue_new') }}">
+        Nouvelle image
+    </a>
+    
+    {% endblock %}

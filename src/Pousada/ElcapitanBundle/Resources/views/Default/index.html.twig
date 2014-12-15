@@ -1,0 +1,482 @@
+{% extends '::base.html.twig' %}
+{% block title %}Issue Index{% endblock %}
+
+{% block body -%}
+
+{# On n'affiche le lien « Ajouter une annonce » qu'aux auteurs
+  (et admins, qui héritent du rôle auteur) #}
+{% if is_granted('ROLE_USER') %}
+  <li><a href="">Ajouter une annonce</a></li>
+{% endif %}
+
+
+<div class="body-wrapper">
+	<div class="header-part-wrapper" style="background: url('{{ asset('bundles/Elcapitan/images/default-header.jpg') }}') 50% 50% no-repeat; min-height: 420px">
+		
+		<div class="container navigation-container">
+			<div class="header-wrapper">
+				<!-- Get Logo -->
+				<div class="logo-wrapper">
+					<a href=""><img src="{{ asset('bundles/Elcapitan/images/logo-transparent.png') }} " alt="default logo"/></a>				
+				</div>
+					
+					
+					
+					
+				<div class="navigation-wrapper">
+					<div class="main-navigation-wrapper">
+						<div id="main-superfish-wrapper" class="menu-wrapper">
+							<ul id="menu-main-1" class="sf-menu">
+								<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2352"><a href="../index.html">Accueil</a></li>
+								<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2352"><a href="../index.html">Photos</a></li>
+								<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2352"><a href="../index.html">Réservation</a></li>
+								<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2352"><a href="../index.html">Plan d'accès</a></li>
+								<li id="menu-item-2352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2352"><a href="../index.html">Contact</a></li>
+							</ul>
+						</div>	
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+					
+			</div> <!-- header-wrapper -->
+		</div> <!-- container -->
+		
+		
+		<div class="top-slider-wrapper">
+			<div class="container">
+				<div class="slider-wrapper">
+					<div class="" >
+						<ul class="slides">
+							<li><img src="{{ asset('bundles/Elcapitan/images/hotel1.png') }}" alt="" />
+								<div class="flex-caption gdl-slider-caption gdl-slider-font">
+									<div class="gdl-slider-title">El Capitan Barra Grande</div>
+									Chambres Confortables, piscine, bar, climatisation, télé... </div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		<!-- Print Social Icon -->
+		<div class="container social-icon-container">
+			<div class="social-icon-wrapper bottom-slider-on">
+				<div class="social-icon">
+					<a href="#" target="_blank"><img src="{{ asset('bundles/Elcapitan/images/social/facebook.png') }}" alt="facebook"/></a>
+				</div>
+				<div class="social-icon">
+					<a href="#" target="_blank"><img src="{{ asset('bundles/Elcapitan/images/social/flickr.png') }}" alt="flickr"/></a>
+				</div>
+				<div class="social-icon">
+					<a href="#" target="_blank"><img src="{{ asset('bundles/Elcapitan/images/social/twitter.png') }}" alt="twitter"/></a>
+				</div>			
+			</div> <!-- Social Icon Wrapper -->	
+		</div> <!-- Conatiner -->		
+				
+	</div> <!-- header-part-wrapper -->
+	
+	<div class="bottom-slider-top-bar"></div>
+		<div class="bottom-slider-wrapper">
+			<div class="container">
+				<div class="one-third column mb40">
+					<div class="column-service-wrapper">
+						<div class="column-service-image">
+							<img src="{{ asset('bundles/Elcapitan/images/icons/icon-1.png') }}" alt="icon" />
+						</div>
+						<div class="column-service-content-wrapper">
+							<h3 class="column-service-title">La pousada en images</h3>
+							<div class="column-service-content"> 
+								Etiam porta sem malesuada magnais
+								llis euismod. Aenean lacinia bibendui
+								nec id elit non mi porta donec. 
+							</div>
+							<a href="http://www.google.com/" class="column-service-read-more">voir</a>
+						</div>
+					</div>
+				</div>
+				<div class="one-third column mb40">
+					<div class="column-service-wrapper">
+						<div class="column-service-image">
+							<img  src="{{ asset('bundles/Elcapitan/images/icone-reservation.png') }}" alt="icon" />
+						</div>
+						<div class="column-service-content-wrapper">
+							<h3 class="column-service-title">Réservation</h3>
+							<div class="column-service-content"> 
+								Etiam porta sem malesuada magnais
+								llis euismod. Aenean lacinia bibendui
+								nec id elit non mi porta donec. 
+							</div>
+							<a href="http://www.google.com/" class="column-service-read-more">voir</a>
+						</div>
+					</div>
+				</div>
+				<div class="one-third column mb40">
+					<div class="column-service-wrapper">
+						<div class="column-service-image">
+							<img src="{{ asset('bundles/Elcapitan/images/icons/icon-3.png') }}" alt="icon" />
+						</div>
+						<div class="column-service-content-wrapper">
+							<h3 class="column-service-title">Plan d'accès</h3>
+							<div class="column-service-content"> 
+								Etiam porta sem malesuada magnais
+								llis euismod. Aenean lacinia bibendui
+								nec id elit non mi porta donec. 
+							</div>
+							<a href="http://www.google.com/" class="column-service-read-more">voir</a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>	
+				
+				
+						
+	<div class="header-bottom-bar "></div>
+	<div class="content-part-wrapper ">
+		<div class="container">
+				<div class="content-wrapper ">
+			
+		<div class="page-wrapper">
+			<div class='gdl-page-float-left'>
+				<div class='gdl-page-item'>
+					<div class="sixteen columns ">
+						<div class="stunning-text-wrapper">
+							<div class="stunning-text-content-wrapper mt0">
+								<h1 class="stunning-text-title">Pousada ElCapitan - Barra Grande</h1>
+								<div class="stunning-text-caption">
+									<span>Un paradis sur Terre.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br class="clear">
+					<div class="sixteen columns ">
+						<div class="divider">
+							<div class="scroll-top"></div>
+						</div>
+					</div>
+					<br class="clear">
+					<div class="sixteen columns feature-media-item">
+						<div>
+							<table class="">
+						        <tbody>
+						        	<tr>
+						        	{% for entity in entities %}
+						                <td>{% if entity.cover %}<img style="width:200px; height:140px;" class="img-responsive image" src="{{ asset(entity.getCoverWeb) }}"/>{% endif%}</td>
+						        	{% endfor %}
+						        	</tr>
+						        </tbody>
+						    </table>
+						</div>
+						<br class="clear">
+						<br/><br/>
+						<div class="feature-media-thumbnail-wrapper">		
+							<iframe width="460" height="260" src="//www.youtube.com/embed/eIY6di6XG9I" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="feature-media-content-wrapper">
+							<div class="feature-media-header-wrapper">
+								<div class="feature-media-icon-wrapper">
+									<img src="{{ asset('bundles/Elcapitan/images/icons/icon-play.png') }}" alt="" /></div>
+									<div class="feature-media-title-wrapper">
+										<h3 class="feature-media-title">Vidéo de Barra Grande</h3>
+										<div class="feature-media-caption">Mollis Ipsum Tortor Vulputate</div>
+									</div>
+								<div class="clear"></div>
+							</div>
+							<div class="feature-media-content">
+								Décrouvez la ville de Barra Grande en vidéo !
+							</div>
+							<a class="gdl-button shortcode-large-button" href="#" >Reservation d'un séjour</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<br class="clear">
+					<div class="sixteen columns">
+						<div class="divider">
+							<div class="scroll-top"></div>
+						</div>
+					</div>
+					<br class="clear">
+					<div class="one-third column wrapper">
+						<div class="header-title-wrapper wrapper-on">
+							<div class="header-title-icon" style="background: url('../wp-content/uploads/2012/06/icon-bar-1.png') 0 50% no-repeat;" ></div>
+							<h3 class="header-title title-color gdl-title">Personnel</h3>
+						</div>
+						<div class="clear"></div>
+						<div class="testimonial-widget-holder">
+							<div class="testimonial-widget one-third column mb25">
+								<div class="testimonial-thumbnail">
+									<img style="width:80px, height:80px;" src="{{ asset('bundles/Elcapitan/images/test-2-80x80.png') }}" alt="" />
+								</div>
+								<div class="testimonial-content-wrapper">
+									<div class="testimonial-title-wrapper">
+										<h3 class="testimonial-author-name">Gustavo Aguiar</h3>
+										<div class="testimonial-author-position">
+											Manager
+										</div>
+									</div>
+									<div class="testimonial-content">
+										Gustavo est manager de la pousada depuis plusieurs années. Son travail est remarquable. 
+									</div>
+								</div>
+							</div>
+							<div class="testimonial-widget one-third column mb25">
+								<div class="testimonial-thumbnail">
+									<img src="{{ asset('bundles/Elcapitan/images/test-1-80x80.png') }}" alt="" />
+								</div>
+								<div class="testimonial-content-wrapper">
+									<div class="testimonial-title-wrapper">
+										<h3 class="testimonial-author-name">Albilene Moreira</h3>
+										<div class="testimonial-author-position">Responsable des chambres</div>
+									</div>
+									<div class="testimonial-content">
+										Albilene est responsable des chambres. Son travail est remarquable. 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="one-third column wrapper mt0">
+						<div class="header-title-wrapper wrapper-on">
+							<div class="header-title-icon" style="background: url('../wp-content/uploads/2012/06/icon-bar-2.png') 0 50% no-repeat;" ></div
+								<h3 class="header-title title-color gdl-title">Actualités</h3>
+							</div>
+							<div class="clear"></div>
+							<div id="blog-item-holder" class="blog-item-holder">
+								<div class="blog-item0 blog-widget-wrapper">
+									<div class="blog-thumbnail-image">
+										<a href="../this-is-just-a-single-clean-post/index.html"><img src="{{ asset('bundles/Elcapitan/images/quarto1.jpg') }}" alt=""/></a>
+									</div>
+									<div class="blog-thumbnail-context">
+										<h2 class="blog-thumbnail-title post-title-color gdl-title">
+											<a href="../this-is-just-a-single-clean-post/index.html">This is Just a Single Clean Post</a>
+										</h2>
+										<div class="blog-thumbnail-date post-info-color">
+											Jan 07, 2012<a href="../this-is-just-a-single-clean-post/index.html#comments" title="Comment on This is Just a Single Clean Post">, 1 Comment</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="blog-item0 blog-widget-wrapper">
+									<div class="blog-thumbnail-image">
+										<a href="../etiam-porta-sem/index.html"><img src="{{ asset('bundles/Elcapitan/images/cm.jpg') }}" alt=""/></a>
+									</div>
+									<div class="blog-thumbnail-context">
+										<h2 class="blog-thumbnail-title post-title-color gdl-title"><a href="../etiam-porta-sem/index.html">Post With Left Sidebar</a></h2>
+										<div class="blog-thumbnail-date post-info-color">
+											Dec 06, 2011<a href="../etiam-porta-sem/index.html#comments" title="Comment on Post With Left Sidebar">, 1 Comment</a>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+							</div>
+							<div class="one-third column ">
+								<strong>    </strong>
+							</div>
+						</div>
+					</div>			
+			<br class="clear">
+			</div>
+		</div> <!-- content-wrapper -->
+	
+		</div> <!-- container -->
+	</div> <!-- content-part-wrapper -->
+	<div class="footer-wrapper">
+				
+					<div class="footer-wrapper-gimmick"></div>
+				
+		
+		<!-- Get Footer Widget -->
+					<div class="container mt0">
+				<div class="footer-widget-wrapper">
+					<div class="four columns mt0"><div class="custom-sidebar gdl-divider"><h3 class="custom-sidebar-title footer-title-color gdl-title">Popular Posts Widget</h3><div class='gdl-recent-post-widget'>				<div class="recent-post-widget">
+					<div class="recent-post-widget-thumbnail">
+						<a href="../adipiscing-fringilla-commodo/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_32032949_Subscription_Monthly_XXL-70x45.jpg" alt=""/>						</a>
+					</div>
+					<div class="recent-post-widget-context">
+						<div class="recent-post-widget-title gdl-title">
+							<a href="../adipiscing-fringilla-commodo/index.html"> 
+								Post Different Thumbnail 
+							</a>
+						</div>
+						<div class="recent-post-widget-comment-num post-info-color">
+							5 Comments   
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>						
+								<div class="recent-post-widget">
+					<div class="recent-post-widget-thumbnail">
+						<a href="../aenean-lacinia-bibendum/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_40491832_Subscription_Monthly_XL-70x45.jpg" alt=""/>						</a>
+					</div>
+					<div class="recent-post-widget-context">
+						<div class="recent-post-widget-title gdl-title">
+							<a href="../aenean-lacinia-bibendum/index.html"> 
+								Post With Slider Thumbnail 
+							</a>
+						</div>
+						<div class="recent-post-widget-comment-num post-info-color">
+							3 Comments   
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>						
+								<div class="recent-post-widget">
+					<div class="recent-post-widget-thumbnail">
+						<a href="../purus-inceptos-euismod-sit/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_32292396_Subscription_Monthly_XL-70x45.jpg" alt=""/>						</a>
+					</div>
+					<div class="recent-post-widget-context">
+						<div class="recent-post-widget-title gdl-title">
+							<a href="../purus-inceptos-euismod-sit/index.html"> 
+								Purus Inceptos Euismod Sit 
+							</a>
+						</div>
+						<div class="recent-post-widget-comment-num post-info-color">
+							1 Comment   
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>						
+				</div></div></div><div class="four columns mt0"><div class="custom-sidebar gdl-divider"><h3 class="custom-sidebar-title footer-title-color gdl-title">Recent Port Widget</h3><div class='gdl-recent-port-widget'>				<div class="recent-port-widget">
+					<div class="recent-port-widget-thumbnail">
+						<a href="../portfolio/justo-malesuada-ullamcorper/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_30860001_Subscription_Monthly_L-56x56.jpg" alt=""/>						</a>
+					</div>
+				</div>						
+								<div class="recent-port-widget">
+					<div class="recent-port-widget-thumbnail">
+						<a href="../portfolio/donec-ullamcorper/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_40836542_Subscription_Monthly_XL-56x56.jpg" alt=""/>						</a>
+					</div>
+				</div>						
+								<div class="recent-port-widget">
+					<div class="recent-port-widget-thumbnail">
+						<a href="../portfolio/praesent-commodo-cursus/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_39252218_Subscription_Monthly_XL-56x56.jpg" alt=""/>						</a>
+					</div>
+				</div>						
+								<div class="recent-port-widget">
+					<div class="recent-port-widget-thumbnail">
+						<a href="../portfolio/dapibus-euismod-tristique-vestibulum/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_32494698_Subscription_Monthly_XL-56x56.jpg" alt=""/>						</a>
+					</div>
+				</div>						
+								<div class="recent-port-widget">
+					<div class="recent-port-widget-thumbnail">
+						<a href="../portfolio/sollicitudin-pharetra-porta/index.html">
+							<img src="../wp-content/uploads/2012/01/typo-56x56.jpg" alt=""/>						</a>
+					</div>
+				</div>						
+								<div class="recent-port-widget">
+					<div class="recent-port-widget-thumbnail">
+						<a href="../portfolio/quam-purus/index.html">
+							<img src="../wp-content/uploads/2012/05/Fotolia_37954728_Subscription_Monthly_XL-56x56.jpg" alt=""/>						</a>
+					</div>
+				</div>						
+				<div class='clear'></div></div></div></div><div class="four columns mt0"><div class="custom-sidebar gdl-divider"><h3 class="custom-sidebar-title footer-title-color gdl-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments">GoodLayers on <a href="../aenean-lacinia-bibendum/index.html#comment-26">Post With Slider Thumbnail</a></li><li class="recentcomments">GoodLayers on <a href="../aenean-lacinia-bibendum/index.html#comment-25">Post With Slider Thumbnail</a></li><li class="recentcomments">GoodLayers on <a href="../aenean-lacinia-bibendum/index.html#comment-24">Post With Slider Thumbnail</a></li><li class="recentcomments">saintdo on <a href="../etiam-porta-sem/index.html#comment-17">Post With Left Sidebar</a></li></ul></div></div><div class="four columns mt0"><div class="custom-sidebar gdl-divider"><h3 class="custom-sidebar-title footer-title-color gdl-title">Contact Widget</h3>		
+		<script type="text/javascript">
+			/* Contact Form Widget*/
+			jQuery(document).ready(function() {
+				jQuery('form#contactForm').submit(function() {
+					jQuery('form#contactForm .error').remove();
+					var hasError = false;
+					jQuery('.requiredField').each(function() {
+						if(jQuery.trim(jQuery(this).val()) == '') {
+							var labelText = jQuery(this).prev('label').text();
+							jQuery(this).parent().append('<div class="error">* Require</div>');
+							hasError = true;
+							
+						} else if(jQuery(this).hasClass('email')) {
+							var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+							if(!emailReg.test(jQuery.trim(jQuery(this).val()))) {
+								var labelText = jQuery(this).prev('label').text();
+								jQuery(this).parent().append('<div class="error">* Please enter a valid email address</div>');
+								hasError = true;
+							}
+						}
+					});
+					
+					if(!hasError) {
+						jQuery('form#contactForm li.buttons button').fadeOut('normal', function() {
+							jQuery(this).parent().append('Please Wait...');
+						});
+						var formInput = jQuery(this).serialize();
+						jQuery.post(jQuery(this).attr('action'),formInput, function(data){
+							jQuery('form#contactForm').slideUp("fast", function() {				   
+								jQuery(this).before('<p class="thanks">' + data + '</p>');
+							});
+						});
+					}
+					
+					return false;
+					
+				});
+			});			
+		</script>			
+				
+		<div class="contact-widget-whole"> 				
+			<div class="contact-widget">
+					<form action="http://themes.goodlayers.com/greenearth/wp-admin/admin-ajax.php" id="contactForm" method="post">
+				
+						<ol class="forms">
+							<li>
+								<label>Name</label>
+								<input type="text" name="widget-contactName" id="widget-contactName" value="" class="requiredField" />
+							</li>
+							<li>
+								<label>Email</label>
+								<input type="text" name="widget-email" id="widget-email" value="" class="requiredField email" />
+							</li>
+							<li class="textarea">
+								<label>Message</label>
+								<textarea name="widget-comments" id="widget-commentsText" class="requiredField"></textarea>
+							</li>
+							<li class="screenReader">
+								<input type="text" name="checking" id="checking" class="screenReader" />
+								<input type="text" name="receiver-email" id="receiver-email" class="screenReader" value="tt@tt.tt" />
+								<input type="text" name="action" id="action" class="screenReader" value="submit_contact_widget" />
+							</li>
+							<li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><button type="submit" class="button">Submit</button></li>
+						</ol>
+					</form>
+			</div>
+			<div class="clear alignleft"></div>
+		</div>	<!-- contact widget whole -->				
+		</div></div>					<div class="clear"></div>
+				</div>
+			</div> 
+				
+				
+		<!-- Get Copyright Text -->
+					<div class="copyright-wrapper">
+				<div class="container">					
+					<div class="copyright-left">
+						tel : (73) 3258-6078 | contact: pousada@elcapitan.com.br					</div> 
+					<div class="copyright-right">
+						© Copyright 2014, Pousada ElCapitan					</div> 
+				</div>
+				<div class="clear"></div>
+			</div>
+			</div><!-- footer-wrapper -->
+
+</div> <!-- body-wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+  
+    {% endblock %}

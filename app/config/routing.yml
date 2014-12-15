@@ -1,0 +1,16 @@
+ 
+pousada_elcapitan:
+    resource: "@PousadaElcapitanBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+  
+ 
+
+login:
+    pattern:   /login
+    defaults:  { _controller: PousadaUserBundle:Security:login }
+login_check:
+    pattern:   /login_check
+logout:
+    pattern:   /logout
